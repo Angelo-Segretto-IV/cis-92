@@ -7,7 +7,7 @@ metadata:
 spec:
   containers:
   - name: httpd
-    image: docker.io/httpd:latest
+    image: FROM ghcr.io/angelo-segretto-iv/cis-92:milestone-4.10
     ports:
     - containerPort: 80
 
