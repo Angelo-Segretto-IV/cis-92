@@ -15,3 +15,13 @@ spec:
       value: "django"
     - name: POSTGRES_DB
       value: "mysite"
+    volumeMounts:
+    - name: db
+      mountPath: /var/lib/postgresql
+  
+  volumes:
+  - name: db
+    persistentVolumeClaim:
+      claimName: db
+        
+    
