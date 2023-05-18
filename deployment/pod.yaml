@@ -1,13 +1,13 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: hello-pod
+  name: mysite
   labels:
     function: webserver
 spec:
   containers:
   - name: httpd
-    image: FROM ghcr.io/angelo-segretto-iv/cis-92:milestone-4.10
+    image: ghcr.io/angelo-segretto-iv/cis-92:milestone-4.10
     ports:
     - containerPort: 80
 
@@ -21,3 +21,12 @@ spec:
       httpGet:
         path: /polls/
         port: 80
+
+    env: 
+    - name: SECRET_KEY
+      value: anything
+    - name: PORT
+      value: '80'
+
+
+    
