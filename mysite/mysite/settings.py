@@ -80,7 +80,7 @@ DATABASES = {
         'NAME': 'mysite',
         'USER': 'postgres',
         'PASSWORD': 'django',
-        'HOST': 'DB_HOST',
+        'HOST': '*',
     },
 }
 
