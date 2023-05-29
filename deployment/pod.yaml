@@ -7,7 +7,7 @@ metadata:
 spec:
   containers:
   - name: httpd
-    image: ghcr.io/angelo-segretto-iv/cis-92:milestone-5.10
+    image: ghcr.io/angelo-segretto-iv/cis-92:milestone-4.10
     ports:
     - containerPort: 80
 
@@ -27,15 +27,3 @@ spec:
       value: anything
     - name: PORT
       value: '80'
-
-    env:
-    - name: DB_ENGINE
-      value: "postgres"
-    - name: DB_NAME
-      value: "django"
-    - name: DB_USER
-      value: "django"
-    - name: DB_PASSWORD
-      value: "django"
-    - name: DB_HOST
-      value: "34.133.45.132"

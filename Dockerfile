@@ -4,4 +4,4 @@ RUN pip install django
 RUN pip install psycopg2
 COPY mysite /mysite 
 WORKDIR /mysite 
-CMD python ./manage.py runserver 0.0.0.0:8000
+CMD python ./manage.py runserver 0.0.0.0:$PORT
