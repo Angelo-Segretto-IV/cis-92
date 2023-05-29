@@ -25,7 +25,7 @@ SECRET_KEY = os.environ['SECRET_KEY']
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["*"]
+ALLOWED_HOSTS = [os.environ.get('HOSTNAME', 'localhost')]
 
 
 # Application definition
@@ -80,7 +80,7 @@ DATABASES = {
         'NAME': 'mysite',
         'USER': 'postgres',
         'PASSWORD': 'django',
-        'HOST': [hostname],
+        'HOST': 'postgres',
     },
 }
 
