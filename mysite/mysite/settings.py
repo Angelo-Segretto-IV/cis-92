@@ -20,7 +20,7 @@ CSRF_TRUSTED_ORIGINS = ['https://*.run.app']
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-@o71s+_^+tm0*33j7gv3xrjjtue5)z55sjg40urg(7pu*8kl)5'
+SECRET_KEY = os.environ['SECRET_KEY']
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -81,7 +81,7 @@ DATABASES = {
         'USER': os.environ['DB_USER'],
         'PASSWORD': os.environ['DB_PASSWORD'],
         'HOST': os.environ['DB_HOST'],
-        '$PORT': os.environ['PORT'],
+        'PORT': os.environ['PORT'],
     },
 }
 
